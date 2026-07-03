@@ -47,23 +47,7 @@
           <li>climate diagnosis</li>
         </ul>
       </div>
-      <div class="main-pipeline diagram-canvas" aria-label="科研证据整合流程总览">
-        <svg class="pipeline-svg" viewBox="0 0 1100 320" aria-hidden="true">
-          <defs>
-            <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="rgba(47, 111, 107, 0.15)"></stop>
-              <stop offset="50%" stop-color="rgba(47, 111, 107, 0.55)"></stop>
-              <stop offset="100%" stop-color="rgba(47, 111, 107, 0.15)"></stop>
-            </linearGradient>
-          </defs>
-          <path d="M95 160 H1005" stroke="url(#pipeGrad)" stroke-width="3" stroke-dasharray="8 8" fill="none"></path>
-          <path d="M175 160 H225 M375 160 H425 M575 160 H625 M775 160 H825" stroke="rgba(122,163,154,0.5)" stroke-width="2" marker-end="url(#arrowhead)"></path>
-          <defs>
-            <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-              <path d="M0,0 L6,3 L0,6 Z" fill="rgba(122,163,154,0.7)"></path>
-            </marker>
-          </defs>
-        </svg>
+      <div class="main-pipeline pipeline-compact" aria-label="科研证据整合流程总览">
         <div class="pipeline-nodes">
           <article class="pipeline-node">
             <span class="pipe-num">01</span>
@@ -106,134 +90,91 @@
       </a>
     </section>
 
-    <section id="question" class="screen-section reveal">
+    <section id="question" class="screen-section compact-screen reveal">
       <div class="screen-intro compact-intro">
         <p class="eyebrow">Research Question</p>
         <h2 class="screen-title">Particle size · surface · mechanism</h2>
         <p class="panel-line">Dp · surface · turbulence · Vd curve</p>
       </div>
-      <div class="diagram-canvas question-map screen-canvas">
-        <div class="diagram-halo halo-left"></div>
-        <div class="diagram-halo halo-right"></div>
-        <svg class="diagram-flow flow-question" viewBox="0 0 1200 520" aria-hidden="true" preserveAspectRatio="none">
-          <path d="M220 120 C 360 160, 420 195, 550 225"></path>
-          <path d="M230 355 C 360 320, 430 280, 550 250"></path>
-          <path d="M715 220 C 805 205, 870 180, 995 155"></path>
-          <path d="M700 275 C 820 320, 895 350, 1010 390"></path>
-        </svg>
-        <article class="diagram-node node-left-top">
-          <span class="node-kicker">Input</span>
-          <span class="node-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"></circle><path d="M12 5v14"></path><path d="M8.5 8.5 15.5 15.5"></path></svg>
-          </span>
+      <div class="flow-strip flow-strip-wrap" aria-label="研究问题结构">
+        <article class="mini-card">
+          <span class="mini-tag">Input</span>
           <h4>Particle Diameter</h4>
           <p>ultrafine / accumulation / coarse</p>
         </article>
-        <article class="diagram-node node-left-bottom">
-          <span class="node-kicker">Input</span>
-          <span class="node-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c3-6 11-6 14 0"></path><path d="M7 15v3"></path><path d="M12 15v4"></path><path d="M17 15v3"></path></svg>
-          </span>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article class="mini-card">
+          <span class="mini-tag">Input</span>
           <h4>Surface Type</h4>
           <p>forest / grass / water / snow</p>
         </article>
-        <article class="diagram-node node-center accent-node">
-          <span class="node-kicker">Core</span>
-          <span class="node-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16"></path><path d="M8 8l4-4 4 4"></path><path d="M8 16l4 4 4-4"></path></svg>
-          </span>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article class="mini-card mini-card-core">
+          <span class="mini-tag">Core</span>
           <h4>Dry Deposition</h4>
           <p>Vd as the core response</p>
         </article>
-        <article class="diagram-node node-right-top">
-          <span class="node-kicker">Control</span>
-          <span class="node-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18 18 6"></path><path d="M8 6h10v10"></path></svg>
-          </span>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article class="mini-card">
+          <span class="mini-tag">Control</span>
           <h4>Mechanism</h4>
           <p>diffusion / interception / settling</p>
         </article>
-        <article class="diagram-node node-right-bottom">
-          <span class="node-kicker">Output</span>
-          <span class="node-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17c3-4 5-7 8-7 2.2 0 3.6 1.2 5 3"></path><path d="M16 13h3v3"></path></svg>
-          </span>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article class="mini-card">
+          <span class="mini-tag">Output</span>
           <h4>Observed Curve</h4>
-          <p>particle diameter vs deposition velocity</p>
+          <p>Dp vs deposition velocity</p>
         </article>
       </div>
     </section>
 
-    <section id="evidence" class="screen-section reveal">
+    <section id="evidence" class="screen-section compact-screen reveal">
       <div class="screen-intro compact-intro">
         <p class="eyebrow">Evidence Structure</p>
         <h2 class="screen-title">Literature → structured data</h2>
         <p class="panel-line">source papers · metadata fields · quality control</p>
       </div>
-      <div class="diagram-canvas evidence-map screen-canvas">
-        <div class="diagram-halo halo-evidence-left"></div>
-        <div class="diagram-halo halo-evidence-right"></div>
-        <svg class="diagram-flow flow-evidence" viewBox="0 0 1200 520" aria-hidden="true" preserveAspectRatio="none">
-          <path d="M195 135 C 355 110, 470 145, 585 205"></path>
-          <path d="M1000 140 C 835 115, 735 150, 620 210"></path>
-          <path d="M585 285 C 500 330, 385 355, 230 390"></path>
-          <path d="M620 285 C 735 330, 835 350, 985 392"></path>
-        </svg>
-        <article class="diagram-node node-top-left">
-          <span class="node-kicker">Source</span>
-          <span class="node-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h8l4 4v12H7z"></path><path d="M15 4v4h4"></path></svg>
-          </span>
+      <div class="flow-strip flow-strip-wrap" aria-label="证据整合结构">
+        <article class="mini-card">
+          <span class="mini-tag">Source</span>
           <h4>Review Sources</h4>
           <p>Farmer / Shu / cited papers</p>
         </article>
-        <article class="diagram-node node-top-right">
-          <span class="node-kicker">Read</span>
-          <span class="node-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5C6 5.5 8 5 10 5c2.2 0 4.2.6 6 1.7V19c-1.8-1.1-3.8-1.7-6-1.7S5.8 17.9 4 19z"></path><path d="M10 5v12.3"></path></svg>
-          </span>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article class="mini-card">
+          <span class="mini-tag">Read</span>
           <h4>Original Papers</h4>
-          <p>observation / wind tunnel / model evaluation</p>
+          <p>observation / wind tunnel / evaluation</p>
         </article>
-        <article class="diagram-node node-mid accent-node">
-          <span class="node-kicker">Table</span>
-          <span class="node-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"></rect><path d="M4 10h16"></path><path d="M9 10v9"></path></svg>
-          </span>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article class="mini-card mini-card-core">
+          <span class="mini-tag">Table</span>
           <h4>Evidence Table</h4>
-          <p>30+ fields for cross-study comparison</p>
+          <p>30+ fields · cross-study comparison</p>
         </article>
-        <article class="diagram-node node-bottom-left">
-          <span class="node-kicker">Audit</span>
-          <span class="node-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12.5 11 14.5 15.5 10"></path><circle cx="12" cy="12" r="8"></circle></svg>
-          </span>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article class="mini-card">
+          <span class="mini-tag">Audit</span>
           <h4>Metadata Audit</h4>
-          <p>units / height / Dp basis / surface notes</p>
+          <p>units / height / Dp basis / LUC</p>
         </article>
-        <article class="diagram-node node-bottom-right">
-          <span class="node-kicker">Clean</span>
-          <span class="node-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14"></path><path d="M7 7v10a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V7"></path><path d="M10 11v4"></path><path d="M14 11v4"></path></svg>
-          </span>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article class="mini-card">
+          <span class="mini-tag">Clean</span>
           <h4>Quality Control</h4>
-          <p>dedupe / align / interpolation / mapping</p>
+          <p>dedupe / align / interpolation</p>
         </article>
-        <div class="map-caption caption-evidence">
-          <span>literature</span>
-          <span>metadata</span>
-          <span>structured comparison</span>
-        </div>
       </div>
     </section>
 
-    <section id="figures" class="screen-section reveal">
+    <section id="figures" class="screen-section compact-screen reveal">
       <div class="screen-intro compact-intro">
         <p class="eyebrow">Figures</p>
         <h2 class="screen-title">Review figures</h2>
         <p class="panel-line">Vd–Dp curve · mechanism bands · surface comparison</p>
       </div>
-      <div class="figure-gallery">
+      <div class="figure-gallery figure-gallery-compact">
         <figure class="sci-figure">
           <img src="assets/images/vd-dp-curve.png" alt="沉降速度与粒径关系图">
           <figcaption>Fig. 1 · Vd–Dp relationship under observation constraints</figcaption>
@@ -249,57 +190,36 @@
       </div>
     </section>
 
-    <section id="transition" class="screen-section reveal">
+    <section id="transition" class="screen-section compact-screen reveal">
       <div class="screen-intro compact-intro">
         <p class="eyebrow">Research Transition</p>
         <h2 class="screen-title">From dry deposition to climate diagnosis</h2>
-        <p class="panel-line">evidence synthesis · ERA5/NetCDF · model diagnosis</p>
+        <p class="panel-line">review · data · diagnosis · model</p>
       </div>
-      <div class="diagram-canvas transition-map screen-canvas">
-        <div class="diagram-halo halo-transition"></div>
-        <svg class="diagram-flow flow-transition" viewBox="0 0 1200 500" aria-hidden="true" preserveAspectRatio="none">
-          <path d="M130 185 C 255 170, 365 175, 470 185"></path>
-          <path d="M510 185 C 625 195, 725 180, 835 170"></path>
-          <path d="M870 170 C 940 165, 995 215, 1045 300"></path>
-        </svg>
-        <article class="diagram-node node-flow-1">
-          <span class="node-kicker">Stage 1</span>
-          <span class="node-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h8l4 4v12H7z"></path><path d="M15 4v4h4"></path></svg>
-          </span>
+      <div class="flow-strip" aria-label="研究阶段迁移">
+        <article class="mini-card">
+          <span class="mini-tag">Stage 1</span>
           <h4>Dry Deposition Review</h4>
-          <p>mechanism tables and observation evidence</p>
+          <p>mechanism tables · observation evidence</p>
         </article>
-        <article class="diagram-node node-flow-2">
-          <span class="node-kicker">Stage 2</span>
-          <span class="node-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path><rect x="4" y="4" width="16" height="16" rx="3"></rect></svg>
-          </span>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article class="mini-card">
+          <span class="mini-tag">Stage 2</span>
           <h4>Climate Data Reading</h4>
-          <p>Python / NetCDF / ERA5</p>
+          <p>Python · NetCDF · ERA5</p>
         </article>
-        <article class="diagram-node node-flow-3">
-          <span class="node-kicker">Stage 3</span>
-          <span class="node-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17c3-4 5-7 8-7 2.2 0 3.6 1.2 5 3"></path><path d="M16 13h3v3"></path></svg>
-          </span>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article class="mini-card">
+          <span class="mini-tag">Stage 3</span>
           <h4>Regional Diagnosis</h4>
-          <p>soil moisture / temperature / anomalies</p>
+          <p>soil moisture · temperature · anomalies</p>
         </article>
-        <article class="diagram-node node-flow-4 accent-node">
-          <span class="node-kicker">Stage 4</span>
-          <span class="node-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17 19 7"></path><path d="M13 7h6v6"></path></svg>
-          </span>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article class="mini-card mini-card-core">
+          <span class="mini-tag">Stage 4</span>
           <h4>Model Evaluation</h4>
-          <p>PLASIM / CMIP6 / process interpretation</p>
+          <p>PLASIM · CMIP6 · process interpretation</p>
         </article>
-        <div class="trajectory-note">
-          <span>review</span>
-          <span>data</span>
-          <span>diagnosis</span>
-          <span>model</span>
-        </div>
       </div>
     </section>
 
@@ -310,120 +230,39 @@
         <p class="section-subtitle">Literature screening → metadata audit → figures</p>
       </div>
       <div class="workflow-visual">
-        <div class="workflow-steps" aria-label="科研流程图">
-          <article class="workflow-card" data-step="01">
-            <span class="workflow-step-num" aria-hidden="true">01</span>
-            <div class="workflow-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="6"></circle>
-                <path d="m20 20-3.5-3.5"></path>
-              </svg>
-            </div>
-            <h3>Literature Search</h3>
-            <p class="workflow-keywords">review · source papers</p>
-            <p class="workflow-note">从综述和导师论文扩展原始文献</p>
-          </article>
-          <div class="workflow-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14"></path>
-              <path d="m13 6 6 6-6 6"></path>
-            </svg>
+        <div class="main-pipeline pipeline-compact workflow-pipeline" aria-label="科研流程图">
+          <div class="pipeline-nodes">
+            <article class="pipeline-node">
+              <span class="pipe-num">01</span>
+              <h3>Literature Search</h3>
+              <p>review · source papers</p>
+            </article>
+            <article class="pipeline-node">
+              <span class="pipe-num">02</span>
+              <h3>Full-text Reading</h3>
+              <p>methods · variables · figures</p>
+            </article>
+            <article class="pipeline-node accent-pipe">
+              <span class="pipe-num">03</span>
+              <h3>Parameter Extraction</h3>
+              <p>Dp · Vd · environment</p>
+            </article>
+            <article class="pipeline-node">
+              <span class="pipe-num">04</span>
+              <h3>Metadata Audit</h3>
+              <p>units · height · LUC</p>
+            </article>
+            <article class="pipeline-node">
+              <span class="pipe-num">05</span>
+              <h3>Data Cleaning</h3>
+              <p>dedupe · align · tidy</p>
+            </article>
+            <article class="pipeline-node">
+              <span class="pipe-num">06</span>
+              <h3>Mechanism Mapping</h3>
+              <p>formula · scheme · figure</p>
+            </article>
           </div>
-
-          <article class="workflow-card" data-step="02">
-            <span class="workflow-step-num" aria-hidden="true">02</span>
-            <div class="workflow-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 6.5C6 5.5 8 5 10 5c2.2 0 4.2.6 6 1.7V19c-1.8-1.1-3.8-1.7-6-1.7S5.8 17.9 4 19z"></path>
-                <path d="M10 5v12.3"></path>
-              </svg>
-            </div>
-            <h3>Full-text Reading</h3>
-            <p class="workflow-keywords">methods · variables · figures</p>
-            <p class="workflow-note">阅读原文，定位方法、变量和图表</p>
-          </article>
-          <div class="workflow-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14"></path>
-              <path d="m13 6 6 6-6 6"></path>
-            </svg>
-          </div>
-
-          <article class="workflow-card" data-step="03">
-            <span class="workflow-step-num" aria-hidden="true">03</span>
-            <div class="workflow-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <ellipse cx="12" cy="5" rx="7" ry="3"></ellipse>
-                <path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"></path>
-                <path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"></path>
-              </svg>
-            </div>
-            <h3>Parameter Extraction</h3>
-            <p class="workflow-keywords">Dp · Vd · environment</p>
-            <p class="workflow-note">提取粒径、沉降速度和环境参数</p>
-          </article>
-          <div class="workflow-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14"></path>
-              <path d="m13 6 6 6-6 6"></path>
-            </svg>
-          </div>
-
-          <article class="workflow-card" data-step="04">
-            <span class="workflow-step-num" aria-hidden="true">04</span>
-            <div class="workflow-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 11 12 14 22 4"></path>
-                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-              </svg>
-            </div>
-            <h3>Metadata Audit</h3>
-            <p class="workflow-keywords">units · height · LUC</p>
-            <p class="workflow-note">核查单位、高度、粒径基准和下垫面</p>
-          </article>
-          <div class="workflow-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14"></path>
-              <path d="m13 6 6 6-6 6"></path>
-            </svg>
-          </div>
-
-          <article class="workflow-card" data-step="05">
-            <span class="workflow-step-num" aria-hidden="true">05</span>
-            <div class="workflow-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 7h16"></path>
-                <path d="M7 12h10"></path>
-                <path d="M10 17h4"></path>
-              </svg>
-            </div>
-            <h3>Data Cleaning</h3>
-            <p class="workflow-keywords">dedupe · align · tidy</p>
-            <p class="workflow-note">去重、统一单位并按模型需求整理</p>
-          </article>
-          <div class="workflow-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14"></path>
-              <path d="m13 6 6 6-6 6"></path>
-            </svg>
-          </div>
-
-          <article class="workflow-card" data-step="06">
-            <span class="workflow-step-num" aria-hidden="true">06</span>
-            <div class="workflow-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="6" cy="12" r="2"></circle>
-                <circle cx="18" cy="6" r="2"></circle>
-                <circle cx="18" cy="18" r="2"></circle>
-                <path d="M8 12h4"></path>
-                <path d="M14 12h2l2-4"></path>
-                <path d="M14 12h2l2 4"></path>
-              </svg>
-            </div>
-            <h3>Mechanism Mapping</h3>
-            <p class="workflow-keywords">formula · scheme · figure</p>
-            <p class="workflow-note">连接机制公式、参数化方案与图表表达</p>
-          </article>
         </div>
 
         <div class="training-path">
@@ -432,58 +271,23 @@
             <h3>My Research Training Path</h3>
             <p class="section-subtitle">From evidence synthesis to climate data diagnosis</p>
           </div>
-          <div class="training-path-grid">
-            <article class="path-card">
-              <div class="path-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 4h8l4 4v12H7z"></path>
-                  <path d="M15 4v4h4"></path>
-                  <path d="M10 13h6"></path>
-                </svg>
-              </div>
-              <p class="path-stage">Stage 1</p>
+          <div class="flow-strip flow-strip-wrap" aria-label="研究训练路径">
+            <article class="mini-card">
+              <span class="mini-tag">Stage 1</span>
               <h4>Evidence Synthesis</h4>
-              <p class="path-keywords">literature review · metadata audit · mechanism tables</p>
-              <p class="path-note">整理干沉降文献证据，建立机制对照表与元数据字段。</p>
+              <p>literature review · metadata audit · mechanism tables</p>
             </article>
-            <div class="path-connector" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="m13 6 6 6-6 6"></path>
-              </svg>
-            </div>
-            <article class="path-card">
-              <div class="path-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 18h16"></path>
-                  <path d="M7 15V9"></path>
-                  <path d="M12 15V6"></path>
-                  <path d="M17 15v-3"></path>
-                  <path d="M5 5h14"></path>
-                </svg>
-              </div>
-              <p class="path-stage">Stage 2</p>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <article class="mini-card">
+              <span class="mini-tag">Stage 2</span>
               <h4>Data Transition</h4>
-              <p class="path-keywords">Python · NetCDF · ERA5 · visualization</p>
-              <p class="path-note">学习 Python、NetCDF 与 ERA5 数据读取和制图。</p>
+              <p>Python · NetCDF · ERA5 · visualization</p>
             </article>
-            <div class="path-connector" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="m13 6 6 6-6 6"></path>
-              </svg>
-            </div>
-            <article class="path-card">
-              <div class="path-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="8"></circle>
-                  <path d="M12 8v4l2.5 2.5"></path>
-                </svg>
-              </div>
-              <p class="path-stage">Stage 3</p>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <article class="mini-card mini-card-core">
+              <span class="mini-tag">Stage 3</span>
               <h4>Model Evaluation</h4>
-              <p class="path-keywords">CMIP6 · PLASIM · model diagnosis · uncertainty</p>
-              <p class="path-note">学习 PLASIM/CMIP6 模式资料诊断与不确定性分析。</p>
+              <p>CMIP6 · PLASIM · model diagnosis</p>
             </article>
           </div>
         </div>
@@ -498,67 +302,30 @@
         <h2 class="screen-title">参考学习书目</h2>
         <p class="panel-line">meteorology foundations · dry-deposition theory</p>
       </div>
-      <div class="reading-grid">
-        <article class="book-card">
-          <div class="book-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-            </svg>
-          </div>
-          <div class="book-body">
-            <p class="book-tag">Open textbook · CC BY-NC-SA</p>
+      <div class="reading-list">
+        <article class="book-row">
+          <div class="book-row-head">
             <h3>
-              <a href="https://geo.libretexts.org/Bookshelves/Meteorology_and_Climate_Science/Practical_Meteorology_(Stull)" target="_blank" rel="noreferrer">
-                Practical Meteorology
-              </a>
+              <a href="https://geo.libretexts.org/Bookshelves/Meteorology_and_Climate_Science/Practical_Meteorology_(Stull)" target="_blank" rel="noreferrer">Practical Meteorology</a>
             </h3>
-            <p class="book-meta">Roland Stull · University of British Columbia</p>
-            <p class="book-note">学习大气基础、边界层与污染物扩散，补充干沉降相关气象背景。</p>
-            <ul class="book-chapters">
-              <li>
-                <a href="https://geo.libretexts.org/Bookshelves/Meteorology_and_Climate_Science/Practical_Meteorology_(Stull)/18%3A_Atmospheric_Boundary_Layer" target="_blank" rel="noreferrer">
-                  Ch. 18 · Atmospheric Boundary Layer
-                </a>
-              </li>
-              <li>
-                <a href="https://geo.libretexts.org/Bookshelves/Meteorology_and_Climate_Science/Practical_Meteorology_(Stull)/19%3A_Pollutant_Dispersion" target="_blank" rel="noreferrer">
-                  Ch. 19 · Pollutant Dispersion
-                </a>
-              </li>
-            </ul>
+            <span class="book-tag">Stull · open textbook</span>
           </div>
+          <p class="book-note">大气基础、边界层与污染物扩散。</p>
+          <p class="book-links">
+            <a href="https://geo.libretexts.org/Bookshelves/Meteorology_and_Climate_Science/Practical_Meteorology_(Stull)/18%3A_Atmospheric_Boundary_Layer" target="_blank" rel="noreferrer">Ch. 18 ABL</a>
+            ·
+            <a href="https://geo.libretexts.org/Bookshelves/Meteorology_and_Climate_Science/Practical_Meteorology_(Stull)/19%3A_Pollutant_Dispersion" target="_blank" rel="noreferrer">Ch. 19 Dispersion</a>
+          </p>
         </article>
-
-        <article class="book-card book-card-focus">
-          <div class="book-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-              <path d="M8 7h8"></path>
-              <path d="M8 11h6"></path>
-            </svg>
-          </div>
-          <div class="book-body">
-            <p class="book-tag book-tag-focus">Core reference · Ch. 19</p>
+        <article class="book-row book-row-focus">
+          <div class="book-row-head">
             <h3>
-              <a href="https://www.wiley.com/en-us/Atmospheric+Chemistry+and+Physics%3A+From+Air+Pollution+to+Climate+Change%2C+3rd+Edition-p-9781118947401" target="_blank" rel="noreferrer">
-                Atmospheric Chemistry and Physics
-              </a>
+              <a href="https://www.wiley.com/en-us/Atmospheric+Chemistry+and+Physics%3A+From+Air+Pollution+to+Climate+Change%2C+3rd+Edition-p-9781118947401" target="_blank" rel="noreferrer">Atmospheric Chemistry and Physics</a>
             </h3>
-            <p class="book-meta">Seinfeld &amp; Pandis · 3rd Edition (Wiley)</p>
-            <p class="book-note">综述工作的核心理论来源。当前重点阅读第 19 章干沉降：沉降速度、阻力模型与颗粒物沉降参数化。</p>
-            <ul class="book-chapters book-chapters-detailed">
-              <li>19.1 Deposition velocity</li>
-              <li>19.2 Resistance model for dry deposition</li>
-              <li>19.3 Aerodynamic resistance</li>
-              <li>19.4 Quasi-laminar resistance (gases · particles)</li>
-              <li>19.5 Surface resistance (water · vegetation)</li>
-              <li>19.6 Measurement of dry deposition</li>
-              <li>19.7 Modeling and measurement comments</li>
-            </ul>
-            <p class="book-access">纸质版 / 学校图书馆借阅 · 出版社：<a href="https://www.wiley.com/en-us/Atmospheric+Chemistry+and+Physics%3A+From+Air+Pollution+to+Climate+Change%2C+3rd+Edition-p-9781118947401" target="_blank" rel="noreferrer">Wiley</a></p>
+            <span class="book-tag book-tag-focus">Seinfeld &amp; Pandis · Ch. 19</span>
           </div>
+          <p class="book-note">干沉降理论：沉降速度、阻力模型、颗粒物参数化。</p>
+          <p class="book-links">19.1 Vd · 19.2 resistance model · 19.3–19.4 aerodynamic / quasi-laminar · 19.5 surface · 19.6 measurement</p>
         </article>
       </div>
     </section>
