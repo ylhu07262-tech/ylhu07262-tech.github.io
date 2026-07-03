@@ -12,13 +12,15 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand-link" href="#home" aria-label="返回首页">
-      <span class="brand-mark">HYL</span>
-      <div>
-        <span class="brand-kicker">Research Portfolio</span>
-        <h1>胡雅兰</h1>
-      </div>
-    </a>
+    <div class="brand">
+      <a class="brand-link" href="#home" aria-label="返回首页">
+        <span class="brand-mark">HYL</span>
+        <div>
+          <p class="brand-kicker">Research Portfolio</p>
+          <h1>胡雅兰</h1>
+        </div>
+      </a>
+    </div>
     <nav class="site-nav" aria-label="主导航">
       <a href="#home">Home</a>
       <a href="#question">Question</a>
@@ -34,9 +36,8 @@
   <main class="story-scroll">
     <section id="home" class="screen-section hero-screen reveal">
       <div class="screen-intro">
-        <p class="eyebrow">Research Portfolio</p>
-        <h2 class="screen-title">胡雅兰个人科研主页</h2>
-        <p class="hero-subtitle">颗粒物干沉降综述 · 观测证据整合 · 参数核查 · 气候数据分析</p>
+        <p class="eyebrow">Research Focus</p>
+        <h2 class="screen-title">Particle Dry Deposition · Evidence Synthesis</h2>
         <ul class="keyword-list screen-keywords" aria-label="研究关键词">
           <li>dry deposition</li>
           <li>evidence synthesis</li>
@@ -46,41 +47,42 @@
           <li>climate diagnosis</li>
         </ul>
       </div>
-      <div class="main-pipeline" aria-label="科研证据整合流程总览">
+      <div class="main-pipeline pipeline-compact" aria-label="科研证据整合流程总览">
         <div class="pipeline-nodes">
           <article class="pipeline-node">
             <span class="pipe-num">01</span>
-            <h3>文献检索</h3>
-            <p>扩展综述引用范围</p>
+            <h3>Literature</h3>
+            <p>review expansion</p>
           </article>
           <article class="pipeline-node">
             <span class="pipe-num">02</span>
-            <h3>精读原文</h3>
-            <p>方法与图表核对</p>
+            <h3>Reading</h3>
+            <p>methods &amp; figures</p>
           </article>
           <article class="pipeline-node accent-pipe">
             <span class="pipe-num">03</span>
-            <h3>参数提取</h3>
-            <p>Dp · Vd · 环境变量</p>
+            <h3>Extraction</h3>
+            <p>Dp · Vd · env</p>
           </article>
           <article class="pipeline-node">
             <span class="pipe-num">04</span>
-            <h3>元数据核查</h3>
-            <p>单位 · 高度 · 下垫面</p>
+            <h3>Audit</h3>
+            <p>units · LUC</p>
           </article>
           <article class="pipeline-node">
             <span class="pipe-num">05</span>
-            <h3>数据清洗</h3>
-            <p>去重 · 对齐 · 规整</p>
+            <h3>Cleaning</h3>
+            <p>align · tidy</p>
           </article>
           <article class="pipeline-node">
             <span class="pipe-num">06</span>
-            <h3>机制作图</h3>
-            <p>沉降机制与结果图</p>
+            <h3>Mapping</h3>
+            <p>mechanism · figure</p>
           </article>
         </div>
       </div>
-      <p class="screen-caption">正在开展颗粒物干沉降综述的证据整合工作：文献筛选、参数提取、元数据核查与图表产出。</p>
+      <p class="screen-caption">Evidence synthesis for particle dry-deposition review: literature screening, parameter extraction, metadata audit, and figure production.</p>
+      <p class="screen-lead">开展颗粒物干沉降综述，整理观测证据、核查参数并绘制机制图表。</p>
       <p class="screen-contact-line">Reach me at <a href="mailto:27230227@njnu.edu.cn">27230227@njnu.edu.cn</a></p>
       <a class="scroll-hint" href="#question" aria-label="Scroll to research question">
         <span>Explore research story</span>
@@ -91,38 +93,38 @@
     <section id="question" class="screen-section compact-screen reveal">
       <div class="screen-intro compact-intro">
         <p class="eyebrow">Research Question</p>
-        <h2 class="screen-title">粒径 · 下垫面 · 沉降机制</h2>
-        <p class="panel-line">不同粒径颗粒物在不同下垫面上的沉降速度受何种机制主导</p>
+        <h2 class="screen-title">Particle size · surface · mechanism</h2>
+        <p class="panel-line">Dp · surface · turbulence · Vd curve</p>
       </div>
-      <div class="flow-strip" aria-label="研究问题结构">
+      <div class="flow-strip flow-strip-wrap" aria-label="研究问题结构">
         <article class="mini-card">
           <span class="mini-tag">Input</span>
-          <h4>粒径</h4>
-          <p>超细 / 累积模态 / 粗粒子</p>
+          <h4>Particle Diameter</h4>
+          <p>ultrafine / accumulation / coarse</p>
         </article>
         <div class="flow-arrow" aria-hidden="true">→</div>
         <article class="mini-card">
           <span class="mini-tag">Input</span>
-          <h4>下垫面类型</h4>
-          <p>森林 / 草地 / 水面 / 雪面</p>
+          <h4>Surface Type</h4>
+          <p>forest / grass / water / snow</p>
         </article>
         <div class="flow-arrow" aria-hidden="true">→</div>
         <article class="mini-card mini-card-core">
           <span class="mini-tag">Core</span>
-          <h4>干沉降速度</h4>
-          <p>Vd 作为核心响应量</p>
+          <h4>Dry Deposition</h4>
+          <p>Vd as the core response</p>
         </article>
         <div class="flow-arrow" aria-hidden="true">→</div>
         <article class="mini-card">
           <span class="mini-tag">Control</span>
-          <h4>主导机制</h4>
-          <p>扩散 / 拦截 / 重力沉降</p>
+          <h4>Mechanism</h4>
+          <p>diffusion / interception / settling</p>
         </article>
         <div class="flow-arrow" aria-hidden="true">→</div>
         <article class="mini-card">
           <span class="mini-tag">Output</span>
-          <h4>观测曲线</h4>
-          <p>Vd 随 Dp 的变化关系</p>
+          <h4>Observed Curve</h4>
+          <p>Dp vs deposition velocity</p>
         </article>
       </div>
     </section>
@@ -130,38 +132,38 @@
     <section id="evidence" class="screen-section compact-screen reveal">
       <div class="screen-intro compact-intro">
         <p class="eyebrow">Evidence Structure</p>
-        <h2 class="screen-title">从文献到结构化数据</h2>
-        <p class="panel-line">源文献 → 元数据字段 → 质量控制</p>
+        <h2 class="screen-title">Literature → structured data</h2>
+        <p class="panel-line">source papers · metadata fields · quality control</p>
       </div>
-      <div class="flow-strip" aria-label="证据整合结构">
+      <div class="flow-strip flow-strip-wrap" aria-label="证据整合结构">
         <article class="mini-card">
           <span class="mini-tag">Source</span>
-          <h4>综述来源</h4>
-          <p>Farmer / Zhang 等综述</p>
+          <h4>Review Sources</h4>
+          <p>Farmer / Shu / cited papers</p>
         </article>
         <div class="flow-arrow" aria-hidden="true">→</div>
         <article class="mini-card">
           <span class="mini-tag">Read</span>
-          <h4>原始文献</h4>
-          <p>观测 / 风洞 / 模式评估</p>
+          <h4>Original Papers</h4>
+          <p>observation / wind tunnel / evaluation</p>
         </article>
         <div class="flow-arrow" aria-hidden="true">→</div>
         <article class="mini-card mini-card-core">
           <span class="mini-tag">Table</span>
-          <h4>证据表</h4>
-          <p>30+ 字段 · 跨研究对比</p>
+          <h4>Evidence Table</h4>
+          <p>30+ fields · cross-study comparison</p>
         </article>
         <div class="flow-arrow" aria-hidden="true">→</div>
         <article class="mini-card">
           <span class="mini-tag">Audit</span>
-          <h4>元数据核查</h4>
-          <p>单位 / 高度 / 粒径基准 / 下垫面</p>
+          <h4>Metadata Audit</h4>
+          <p>units / height / Dp basis / LUC</p>
         </article>
         <div class="flow-arrow" aria-hidden="true">→</div>
         <article class="mini-card">
           <span class="mini-tag">Clean</span>
-          <h4>质量控制</h4>
-          <p>去重 / 对齐 / 插值</p>
+          <h4>Quality Control</h4>
+          <p>dedupe / align / interpolation</p>
         </article>
       </div>
     </section>
@@ -169,27 +171,21 @@
     <section id="figures" class="screen-section compact-screen reveal">
       <div class="screen-intro compact-intro">
         <p class="eyebrow">Figures</p>
-        <h2 class="screen-title">综述图表</h2>
-        <p class="panel-line">Vd–Dp 关系曲线 · 机制主导区间 · 下垫面对比</p>
+        <h2 class="screen-title">Review figures</h2>
+        <p class="panel-line">Vd–Dp curve · mechanism bands · surface comparison</p>
       </div>
-      <div class="figure-grid">
-        <figure class="fig-card">
-          <div class="fig-frame">
-            <img src="assets/images/vd-dp-curve.png" alt="沉降速度与粒径关系图">
-          </div>
-          <figcaption>Fig. 1 · Vd–Dp 关系（基于观测约束）</figcaption>
+      <div class="figure-gallery figure-gallery-compact">
+        <figure class="sci-figure">
+          <img src="assets/images/vd-dp-curve.png" alt="沉降速度与粒径关系图">
+          <figcaption>Fig. 1 · Vd–Dp relationship under observation constraints</figcaption>
         </figure>
-        <figure class="fig-card">
-          <div class="fig-frame">
-            <img src="assets/images/mechanism-dominance.png" alt="粒径区间主导沉降机制图">
-          </div>
-          <figcaption>Fig. 2 · 粒径区间沉降机制主导性（常绿针叶林，Zhang 下垫面分类 1）</figcaption>
+        <figure class="sci-figure sci-figure-mechanism">
+          <img src="assets/images/mechanism-dominance.png" alt="粒径区间主导沉降机制图">
+          <figcaption>Fig. 2 · Mechanism dominance along particle diameter (evergreen needleleaf forest, Zhang LUC 1)</figcaption>
         </figure>
-        <figure class="fig-card">
-          <div class="fig-frame">
-            <img src="assets/images/depobox-panels.png" alt="DepoBoxTool多面板结果图">
-          </div>
-          <figcaption>Fig. 3 · 不同下垫面沉降速度对比（DepoBoxTool）</figcaption>
+        <figure class="sci-figure">
+          <img src="assets/images/depobox-panels.png" alt="DepoBoxTool多面板结果图">
+          <figcaption>Fig. 3 · Surface-wise deposition velocity comparison (DepoBoxTool)</figcaption>
         </figure>
       </div>
     </section>
@@ -197,101 +193,101 @@
     <section id="transition" class="screen-section compact-screen reveal">
       <div class="screen-intro compact-intro">
         <p class="eyebrow">Research Transition</p>
-        <h2 class="screen-title">从干沉降到气候诊断</h2>
-        <p class="panel-line">综述 → 数据 → 诊断 → 模式</p>
+        <h2 class="screen-title">From dry deposition to climate diagnosis</h2>
+        <p class="panel-line">review · data · diagnosis · model</p>
       </div>
       <div class="flow-strip" aria-label="研究阶段迁移">
         <article class="mini-card">
           <span class="mini-tag">Stage 1</span>
-          <h4>干沉降综述</h4>
-          <p>机制表格 · 观测证据整合</p>
+          <h4>Dry Deposition Review</h4>
+          <p>mechanism tables · observation evidence</p>
         </article>
         <div class="flow-arrow" aria-hidden="true">→</div>
         <article class="mini-card">
           <span class="mini-tag">Stage 2</span>
-          <h4>气候数据学习</h4>
+          <h4>Climate Data Reading</h4>
           <p>Python · NetCDF · ERA5</p>
         </article>
         <div class="flow-arrow" aria-hidden="true">→</div>
         <article class="mini-card">
           <span class="mini-tag">Stage 3</span>
-          <h4>区域诊断</h4>
-          <p>土壤湿度 · 温度异常</p>
+          <h4>Regional Diagnosis</h4>
+          <p>soil moisture · temperature · anomalies</p>
         </article>
         <div class="flow-arrow" aria-hidden="true">→</div>
         <article class="mini-card mini-card-core">
           <span class="mini-tag">Stage 4</span>
-          <h4>模式评估</h4>
-          <p>PLASIM · CMIP6 · 过程解释</p>
+          <h4>Model Evaluation</h4>
+          <p>PLASIM · CMIP6 · process interpretation</p>
         </article>
       </div>
     </section>
 
     <section id="workflow" class="screen-section compact-screen reveal workflow-section">
-      <div class="section-heading screen-intro compact-intro">
+      <div class="section-heading">
         <p class="eyebrow">Research Workflow</p>
-        <h2>科研工作流程</h2>
-        <p class="section-subtitle">文献筛选 → 元数据核查 → 图表产出</p>
+        <h2>Research Workflow</h2>
+        <p class="section-subtitle">Literature screening → metadata audit → figures</p>
       </div>
       <div class="workflow-visual">
-        <div class="main-pipeline workflow-pipeline" aria-label="科研流程图">
+        <div class="main-pipeline pipeline-compact workflow-pipeline" aria-label="科研流程图">
           <div class="pipeline-nodes">
             <article class="pipeline-node">
               <span class="pipe-num">01</span>
-              <h3>文献检索</h3>
-              <p>综述 · 源文献</p>
+              <h3>Literature Search</h3>
+              <p>review · source papers</p>
             </article>
             <article class="pipeline-node">
               <span class="pipe-num">02</span>
-              <h3>精读原文</h3>
-              <p>方法 · 变量 · 图表</p>
+              <h3>Full-text Reading</h3>
+              <p>methods · variables · figures</p>
             </article>
             <article class="pipeline-node accent-pipe">
               <span class="pipe-num">03</span>
-              <h3>参数提取</h3>
-              <p>Dp · Vd · 环境变量</p>
+              <h3>Parameter Extraction</h3>
+              <p>Dp · Vd · environment</p>
             </article>
             <article class="pipeline-node">
               <span class="pipe-num">04</span>
-              <h3>元数据核查</h3>
-              <p>单位 · 高度 · 下垫面</p>
+              <h3>Metadata Audit</h3>
+              <p>units · height · LUC</p>
             </article>
             <article class="pipeline-node">
               <span class="pipe-num">05</span>
-              <h3>数据清洗</h3>
-              <p>去重 · 对齐 · 规整</p>
+              <h3>Data Cleaning</h3>
+              <p>dedupe · align · tidy</p>
             </article>
             <article class="pipeline-node">
               <span class="pipe-num">06</span>
-              <h3>机制作图</h3>
-              <p>公式 · 方案 · 图表</p>
+              <h3>Mechanism Mapping</h3>
+              <p>formula · scheme · figure</p>
             </article>
           </div>
         </div>
 
         <div class="training-path">
-          <div class="section-heading training-heading screen-intro compact-intro">
+          <div class="section-heading training-heading">
             <p class="eyebrow">My Research Training Path</p>
-            <h3>研究训练路径</h3>
-            <p class="section-subtitle">从证据整合到气候数据诊断</p>
+            <h3>My Research Training Path</h3>
+            <p class="section-subtitle">From evidence synthesis to climate data diagnosis</p>
           </div>
-          <div class="flow-strip" aria-label="研究训练路径">
+          <div class="flow-strip flow-strip-wrap" aria-label="研究训练路径">
             <article class="mini-card">
               <span class="mini-tag">Stage 1</span>
-              <h4>证据整合</h4>
-              <p>文献综述 · 元数据核查 · 机制表格</p>
+              <h4>Evidence Synthesis</h4>
+              <p>literature review · metadata audit · mechanism tables</p>
             </article>
             <div class="flow-arrow" aria-hidden="true">→</div>
             <article class="mini-card">
               <span class="mini-tag">Stage 2</span>
-              <h4>数据能力过渡</h4>
-              <p>Python · NetCDF · ERA5 · 可视化</p>
+              <h4>Data Transition</h4>
+              <p>Python · NetCDF · ERA5 · visualization</p>
             </article>
             <div class="flow-arrow" aria-hidden="true">→</div>
             <article class="mini-card mini-card-core">
               <span class="mini-tag">Stage 3</span>
-              <h4>模式评估</h4>
-              <p>CMIP6 · PLASIM · 模式诊断</p>
+              <h4>Model Evaluation</h4>
+              <p>CMIP6 · PLASIM · model diagnosis</p>
             </article>
           </div>
         </div>
@@ -304,7 +300,7 @@
       <div class="screen-intro compact-intro">
         <p class="eyebrow">Reference Reading</p>
         <h2 class="screen-title">参考学习书目</h2>
-        <p class="panel-line">大气基础理论 · 干沉降专题</p>
+        <p class="panel-line">meteorology foundations · dry-deposition theory</p>
       </div>
       <div class="reading-list">
         <article class="book-row">
@@ -329,7 +325,7 @@
             <span class="book-tag book-tag-focus">Seinfeld &amp; Pandis · Ch. 19</span>
           </div>
           <p class="book-note">干沉降理论：沉降速度、阻力模型、颗粒物参数化。</p>
-          <p class="book-links">19.1 Vd · 19.2 阻力模型 · 19.3–19.4 空气动力学 / 准层流阻力 · 19.5 下垫面 · 19.6 观测方法</p>
+          <p class="book-links">19.1 Vd · 19.2 resistance model · 19.3–19.4 aerodynamic / quasi-laminar · 19.5 surface · 19.6 measurement</p>
         </article>
       </div>
     </section>
@@ -371,15 +367,15 @@
               <p>南京师范大学海洋资源与环境本科生。开展颗粒物干沉降综述：文献扩展、参数提取、元数据核查与图表绘制。同期学习 PLASIM 与气候数据分析。</p>
             </div>
             <div class="summary-card">
-              <div class="summary-item"><h3>切口</h3><p>颗粒物干沉降 · 大气—地表交换</p></div>
+              <div class="summary-item"><h3>切口</h3><p>颗粒物干沉降 · 大气-地表交换</p></div>
               <div class="summary-item"><h3>能力</h3><p>证据整合 · 元数据核查 · 图表表达</p></div>
               <div class="summary-item"><h3>方向</h3><p>土壤湿度 · 陆气耦合 · CMIP6 诊断</p></div>
             </div>
           </div>
           <div class="timeline compact-timeline">
             <article class="timeline-item"><span class="timeline-date">2024</span><div><h3>课题组入门 · Linux / Python 基础</h3></div></article>
-            <article class="timeline-item"><span class="timeline-date">2025</span><div><h3>干沉降理论学习 · 文献证据表建立 · DepoBoxTool 适配</h3></div></article>
-            <article class="timeline-item"><span class="timeline-date">2026</span><div><h3>综述图表绘制 · PLASIM 学习 · 主页搭建</h3></div></article>
+            <article class="timeline-item"><span class="timeline-date">2025</span><div><h3>干沉降理论 · 文献表格 · DepoBoxTool 适配</h3></div></article>
+            <article class="timeline-item"><span class="timeline-date">2026</span><div><h3>综述绘图 · PLASIM 学习 · 主页搭建</h3></div></article>
           </div>
           <div class="skill-grid">
             <article class="skill-card"><h3>Research</h3><ul><li>文献阅读 · 综述写作</li><li>机制框架 · 图表表达</li></ul></article>
