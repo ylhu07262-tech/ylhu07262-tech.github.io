@@ -13,6 +13,7 @@
   --radius-lg: 16px;
   --radius-md: 12px;
   --max-width: 1180px;
+  --content-width: 52rem;
 }
 
 * {
@@ -43,12 +44,20 @@ html {
 
 .screen-section.compact-screen {
   min-height: auto;
-  padding: 3.5rem 0 2.5rem;
+  padding: 3.5rem 1rem 2.5rem;
+  align-items: stretch;
+  gap: 0.65rem;
+}
+
+.screen-section.compact-screen > * {
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
 }
 
 .screen-intro {
   text-align: center;
-  max-width: 46rem;
+  max-width: none;
+  width: min(100%, var(--content-width));
   margin: 0 auto;
 }
 
@@ -72,26 +81,37 @@ html {
   font-size: 0.82rem;
 }
 
+.hero-screen .screen-intro,
+.hero-screen .main-pipeline,
+.hero-screen .screen-caption,
+.hero-screen .screen-lead,
+.hero-screen .screen-contact-line,
+.hero-screen .scroll-hint {
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
+}
+
 .main-pipeline {
   position: relative;
-  max-width: 52rem;
+  width: min(100%, var(--content-width));
   margin-inline: auto;
   margin-top: 0.35rem;
-  padding: 0.65rem 0.5rem;
+  padding: 0;
 }
 
 .pipeline-compact {
-  border-radius: var(--radius-md);
-  background: transparent;
-  border: none;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+  padding: 0.65rem 0;
+  background: transparent;
 }
 
 .pipeline-compact .pipeline-node {
-  padding: 0.55rem 0.4rem;
-  border-radius: 14px;
+  padding: 0.45rem 0.35rem;
+  border-radius: 4px;
   box-shadow: none;
+  background: transparent;
+  border: none;
 }
 
 .pipeline-compact .pipeline-node h3 {
@@ -139,21 +159,21 @@ html {
 .hub-evidence .mini-card:nth-child(5) { grid-column: 3; grid-row: 2; }
 
 .mini-card {
-  padding: 0.6rem 0.7rem;
-  border-radius: var(--radius-md);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  transition: border-color 0.2s ease;
+  padding: 0.45rem 0.5rem;
+  border-radius: 4px;
+  background: transparent;
+  border: none;
+  transition: background 0.2s ease;
 }
 
 .mini-card:hover {
-  border-color: rgba(47, 111, 107, 0.35);
+  background: var(--accent-bg);
 }
 
 .mini-card-core {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--accent);
+  background: var(--accent-bg);
+  border: none;
+  border-left: 2px solid var(--accent);
   color: var(--text);
 }
 
@@ -199,9 +219,11 @@ html {
   display: flex;
   align-items: stretch;
   gap: 0.35rem;
-  max-width: 56rem;
-  margin: 0.5rem auto 0;
-  padding: 0.5rem 0;
+  width: 100%;
+  margin: 0;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
   overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: rgba(122, 163, 154, 0.3) transparent;
@@ -238,38 +260,28 @@ html {
 
 .reading-list {
   display: grid;
-  gap: 0.75rem;
-  max-width: 52rem;
-  margin: 0.5rem auto 0;
+  gap: 0;
+  width: 100%;
+  margin: 0;
+  border-top: 1px solid var(--line);
 }
 
-.ui-legend {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem 1.25rem;
-  max-width: 52rem;
-  margin: 0.35rem auto 0;
-  font-size: 0.72rem;
-  color: var(--muted);
+.book-row {
+  padding: 1rem 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  box-shadow: none;
 }
 
-.legend-link {
-  color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 0.12em;
+.book-row-focus {
+  border-left: none;
+  background: transparent;
 }
 
-.legend-static::before {
-  content: "";
-  display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
-  margin-right: 0.3rem;
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  vertical-align: middle;
-  background: var(--surface);
+.book-row:last-child {
+  border-bottom: none;
 }
 
 .text-link {
@@ -321,34 +333,37 @@ html {
 }
 
 .chapter-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
+  display: block;
+  line-height: 1.7;
+}
+
+.chapter-links .chapter-link + .chapter-link::before {
+  content: " · ";
+  color: var(--muted);
+  text-decoration: none;
 }
 
 .chapter-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.2rem;
-  padding: 0.2rem 0.55rem;
-  border-radius: 999px;
-  border: 1px solid rgba(47, 111, 107, 0.28);
-  background: var(--surface);
+  display: inline;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
   color: var(--accent);
-  font-size: 0.72rem;
-  line-height: 1.35;
-  text-decoration: none;
-  transition: background 0.18s ease, border-color 0.18s ease;
+  font-size: 0.76rem;
+  line-height: 1.6;
+  text-decoration: underline;
+  text-decoration-color: rgba(47, 111, 107, 0.35);
+  text-underline-offset: 0.12em;
 }
 
 .chapter-link:hover {
-  background: var(--accent-bg);
-  border-color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 .chapter-link::after {
-  content: "↗";
-  font-size: 0.62rem;
+  content: " ↗";
+  font-size: 0.68rem;
   opacity: 0.75;
 }
 
@@ -377,19 +392,6 @@ html {
 
 .chapter-notes li + li {
   margin-top: 0.25rem;
-}
-
-.book-row {
-  padding: 0.75rem 0.85rem;
-  border-radius: var(--radius-md);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  box-shadow: none;
-}
-
-.book-row-focus {
-  border-left: 3px solid var(--accent);
-  background: var(--surface);
 }
 
 .book-row-head {
@@ -461,23 +463,23 @@ html {
 }
 
 .pipeline-node {
-  padding: 0.75rem 0.5rem;
-  border-radius: var(--radius-md);
+  padding: 0.45rem 0.35rem;
+  border-radius: 4px;
   text-align: center;
-  background: var(--surface);
-  border: 1px solid var(--line);
+  background: transparent;
+  border: none;
   box-shadow: none;
-  transition: border-color 0.2s ease;
+  transition: background 0.2s ease;
 }
 
 .pipeline-node:hover {
-  border-color: rgba(47, 111, 107, 0.35);
+  background: var(--accent-bg);
 }
 
 .pipeline-node.accent-pipe {
   background: var(--accent-bg);
-  border: 1px solid rgba(47, 111, 107, 0.28);
-  border-left: 3px solid var(--accent);
+  border: none;
+  border-left: 2px solid var(--accent);
   color: var(--text);
 }
 
@@ -576,60 +578,63 @@ html {
   display: grid;
   gap: 0.75rem;
   width: 100%;
-  max-width: 48rem;
-  margin-inline: auto;
+  margin: 0;
+}
+
+.figure-gallery-compact {
+  border-top: 1px solid var(--line);
 }
 
 .figure-gallery-compact .sci-figure {
-  padding: 0.55rem 0.65rem 0.65rem;
+  padding: 0.55rem 0;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
   box-shadow: none;
 }
 
-.figure-gallery-compact .sci-figure img {
-  max-height: min(42vh, 20rem);
-}
-
-.figure-gallery-compact .sci-figure figcaption {
-  margin-top: 0.45rem;
-  font-size: 0.78rem;
+.figure-gallery-compact .sci-figure:last-child {
+  border-bottom: none;
 }
 
 .workflow-pipeline {
-  max-width: 56rem;
+  width: 100%;
 }
 
 .workflow-visual {
-  display: grid;
-  gap: 1.1rem;
+  display: contents;
 }
 
-.training-path {
-  display: grid;
-  gap: 0.65rem;
-  padding-top: 0;
+.training-subhead {
+  margin: 0.85rem 0 0;
+  text-align: center;
+  font-family: "Source Serif 4", serif;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.2;
 }
 
-.training-heading h3 {
-  font-size: clamp(1.2rem, 2vw, 1.55rem);
+.training-line {
+  margin-top: 0.25rem;
+  text-align: center;
 }
 
 .workflow-summary {
-  margin: 0.35rem 0 0;
-  padding: 0.65rem 0.85rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
   text-align: center;
-  color: var(--text);
-  font-size: 0.86rem;
-  border-radius: var(--radius-md);
-  background: var(--surface);
-  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.84rem;
+  border: none;
+  background: none;
 }
 
 .sci-figure {
   margin: 0;
-  padding: 0.65rem 0.75rem 0.75rem;
-  border-radius: var(--radius-md);
-  background: var(--surface);
-  border: 1px solid var(--line);
+  padding: 0.65rem 0 0.75rem;
+  border-radius: 0;
+  background: transparent;
+  border: none;
   box-shadow: none;
   overflow: visible;
 }
@@ -650,6 +655,15 @@ html {
   color: var(--muted);
   font-size: 0.82rem;
   line-height: 1.45;
+}
+
+.figure-gallery-compact .sci-figure img {
+  max-height: min(42vh, 20rem);
+}
+
+.figure-gallery-compact .sci-figure figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.78rem;
 }
 
 .reading-section {
@@ -1543,8 +1557,9 @@ main,
 
 .panel-line {
   margin: 0.35rem 0 0;
-  color: var(--accent);
-  font-size: 0.9rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: center;
 }
 
 .diagram-canvas {
